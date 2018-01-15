@@ -35,8 +35,16 @@ cheap = arr.sort_by do |item|
 		end 
 	puts  cheap
 end
+# trader_du_mardi(semaine)
 
-trader_du_mardi(semaine)
+#-------------------------------------------------------------------------------
+
+def trader(jour, *companies)
+  jour.each { |comp| puts "#{jour} \n\n #{comp}" }
+end
+
+trader(semaine)
+
 
 
 #---------------------------------------------
@@ -65,6 +73,14 @@ trader_du_mardi(semaine)
 #     item[:name]
 # 		end 
 # puts res
+#---------------------------------------------
+# [VU SUR] https://www.codecademy.com/courses/learn-ruby/lessons/methods-blocks-sorting/exercises/splat?action=lesson_resume
+#---------------------------------------------
+# def what_up(greeting, *friends)
+#   friends.each { |friend| puts "#{greeting}, #{friend}!" }
+# end
+
+# what_up("What up", "Ian", "Zoe", "Zenas", "Eleanor")
 
 
 
