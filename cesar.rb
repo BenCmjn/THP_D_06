@@ -17,4 +17,4 @@ end # fin de la méthode
 
 # Appel la méthode "code de cesar" pour la phrase "A chiffrer", et décale de 5 :
 code_de_cesar("A chiffrer", 5)
-puts
+puts #Passe une ligne (sale)

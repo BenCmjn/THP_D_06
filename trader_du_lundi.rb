@@ -15,4 +15,16 @@ jour_7 = { :GOO => 17, :MMM => 14, :ADBE => 2, :EA=> 17, :BA => 7, :KO => 13, :X
 # Fais une fonction trader_du_lundi qui prend en entrée une array de hash
 # contenant des prix d'action, et qui sort pour chaque entreprise
 # le meilleur moment pour acheter, et le meilleur moment pour vendre.
+#-------------------------------------------------------------------------------
+# semaine = [jour_1,jour_2,jour_3,jour_4,jour_5,jour_6,jour7]
+
+def trader_du_lundi(jour)
+	puts jour.values.sort
+end
+
+trader_du_lundi(jour_1)
+
+# frequencies.each { |word, frequency| puts word + " "+ frequency.to_s }
+
+# jour_1.each{|company,prix| puts company+" "+prix}
 
