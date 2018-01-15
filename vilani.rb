@@ -5,8 +5,6 @@
 
 # Trouve la somme des multiples de 3 et 5 inférieurs à 1000.
 ####################################################
-
-
 def pb # Déclaration de la méthode "pb"
 	res = 0 # Déclaration de la variable "res" (résultat)
 	
