@@ -19,7 +19,9 @@ jour_7 = { :GOO => 17, :MMM => 14, :ADBE => 2, :EA=> 17, :BA => 7, :KO => 13, :X
 # semaine = [jour_1,jour_2,jour_3,jour_4,jour_5,jour_6,jour7]
 
 def trader_du_lundi(jour)
-	puts jour.values.sort
+
+	classement = jour.sort_by { |comp, rate| rate }
+	puts classement
 end
 
 trader_du_lundi(jour_1)
@@ -28,3 +30,18 @@ trader_du_lundi(jour_1)
 
 # jour_1.each{|company,prix| puts company+" "+prix}
 
+#---------------------------------------------
+# [VU SUR] http://www.informit.com/articles/article.aspx?p=1244471&seqNum=9
+#---------------------------------------------
+# my_hash.keys.sort_by { |key| my_hash[key] }.each do
+# |key|
+#     puts my_hash[key]
+# end
+#---------------------------------------------
+# 
+#---------------------------------------------
+# [VU SUR] http://www.rubyinside.com/how-to/ruby-sort-hash
+#---------------------------------------------
+# people.sort_by { |name, age| age }
+# => [[:joan, 18], [:fred, 23], [:pete, 54]] 
+# 
