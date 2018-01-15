@@ -16,20 +16,33 @@ jour_7 = { :GOO => 17, :MMM => 14, :ADBE => 2, :EA=> 17, :BA => 7, :KO => 13, :X
 # contenant des prix d'action, et qui sort pour chaque entreprise
 # le meilleur moment pour acheter, et le meilleur moment pour vendre.
 #-------------------------------------------------------------------------------
-# semaine = [jour_1,jour_2,jour_3,jour_4,jour_5,jour_6,jour7]
-
 def trader_du_lundi(jour)
 
 	classement = jour.sort_by { |comp, rate| rate }
 	puts classement
+
+end
+# trader_du_lundi(jour_1)
+
+#-------------------------------------------------------------------------------
+
+semaine = [jour_1,jour_2,jour_3,jour_4,jour_5,jour_6,jour_7]
+
+def trader_du_mardi(arr)
+
+cheap = arr.sort_by do |item|
+		item[:GOO]
+		end 
+	puts  cheap
 end
 
-trader_du_lundi(jour_1)
+trader_du_mardi(semaine)
 
+
+#---------------------------------------------
+# [Par moi-même] :
 # frequencies.each { |word, frequency| puts word + " "+ frequency.to_s }
-
 # jour_1.each{|company,prix| puts company+" "+prix}
-
 #---------------------------------------------
 # [VU SUR] http://www.informit.com/articles/article.aspx?p=1244471&seqNum=9
 #---------------------------------------------
@@ -45,3 +58,16 @@ trader_du_lundi(jour_1)
 # people.sort_by { |name, age| age }
 # => [[:joan, 18], [:fred, 23], [:pete, 54]] 
 # 
+#---------------------------------------------
+# [VU SUR] https://stackoverflow.com/questions/14113909/ruby-sort-by-method
+#---------------------------------------------
+# res = array.sort_by do |item|
+#     item[:name]
+# 		end 
+# puts res
+
+
+
+
+
+
