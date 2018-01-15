@@ -2,19 +2,19 @@
 # qui prend en paramètre un string et le nombre de lettre
 # à décaler, et sort le string modifié.
 
-def code_de_cesar(phrase,x)
-	phrase.each_char do |lettre|
-		lettre = lettre.ord
-		lettre += x
-		lettre = lettre.chr
-		print lettre
-	end
+# Déclaration de la méthode "code_de_cesar"
+def code_de_cesar(phrase,x) # "phrase" =string et "x" = nombre de lettre à décaler.
 	
-end
+	phrase.each_char do |lettre| #Prend chaque char de "phrase" et considère "lettre"
 
-# chiffre_de_cesar("What a string!", 5)
-# => "Bmfy f xywnsl!"
+		lettre = lettre.ord # passe les char en chiffre (cf. ASCII)
+		lettre += x # Rajoute "x" à ce chiffre
+		# Pour la ligne précédente on aurait pu écrire "lettre = lettre + x"
+		lettre = lettre.chr # Maintenant repasse les chiffres en caractères (.chr)
+		print lettre # affiche cette lettre
+	end # Fin de la boucle
+end # fin de la méthode
 
-
-code_de_cesar("Ceci est un code à chiffrer", 5)
+# Appel la méthode "code de cesar" pour la phrase "A chiffrer", et décale de 5 :
+code_de_cesar("A chiffrer", 5)
 puts
